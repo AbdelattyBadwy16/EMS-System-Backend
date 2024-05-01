@@ -234,7 +234,7 @@ namespace EMS_SYSTEM.APPLICATION.Repositories.Services
         }
 
 
-        public async Task<ResponseDTO> RegisterAsync(RegisterDto registerDto)
+        public async Task<ResponseDTO> RegisterAsync(RegisterDto registerDto , String UserRole)
         {
             var user = new ApplicationUser
             {
@@ -247,12 +247,11 @@ namespace EMS_SYSTEM.APPLICATION.Repositories.Services
                 return new ResponseDTO { Message = "UserName already Exists!", IsDone = false, StatusCode = 500 };
 
             var result = await _userManager.CreateAsync(user, registerDto.Password);
-            string role = "FacultyAdmin";
             if (result.Succeeded)
             {
-                if(await _roleManager.RoleExistsAsync(role)) 
+                if(await _roleManager.RoleExistsAsync(UserRole)) 
                 {
-                    var res = await _userManager.AddToRoleAsync(user,role);
+                    var res = await _userManager.AddToRoleAsync(user, UserRole);
                 }
                 return new ResponseDTO { Message = "Account Created Successfully", IsDone = true, StatusCode = 200 };
             }

@@ -76,11 +76,11 @@ namespace EMS_SYSTEM.Controllers
 
         }
         [HttpPost("Register")]
-        public async Task<IActionResult> Register([FromBody]RegisterDto dto)
+        public async Task<IActionResult> Register([FromBody]RegisterDto dto,string role)
         {
             if (ModelState.IsValid)
             {
-                var Response = await _accountService.RegisterAsync(dto);
+                var Response = await _accountService.RegisterAsync(dto,role);
                 if (Response.IsDone == true)
                 {
                     return Ok(Response);

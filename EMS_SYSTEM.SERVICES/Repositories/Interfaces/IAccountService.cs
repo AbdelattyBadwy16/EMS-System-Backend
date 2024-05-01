@@ -16,7 +16,7 @@ namespace EMS_SYSTEM.APPLICATION.Repositories.Interfaces
         public Task<AuthModel> LogIn(LogInDTO model);
         public Task<ApplicationUser> GetCurrentUserAsync();
         public Task<ResponseDTO> ChangePasswordAsync(ChangePasswordDTO model);
-        public Task<ResponseDTO> RegisterAsync(RegisterDto dto);
+        public Task<ResponseDTO> RegisterAsync(RegisterDto dto , string userrole);
         public Task<AuthModel> NewRefreshToken(string token);
 
         public Task<ResponseDTO> DeleteUserAsync(string NID);
