@@ -111,6 +111,8 @@ builder.Services.AddCors(options =>
 });
 
 
+// Auto Mapper
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
 
@@ -132,8 +134,6 @@ app.MapControllers();
 using (var scope = app.Services.CreateScope())
 {
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-
 
     foreach (UserRole role in Enum.GetValues(typeof(UserRole)))
     {
