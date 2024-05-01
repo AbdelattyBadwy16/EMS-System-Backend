@@ -22,7 +22,8 @@ namespace EMS_SYSTEM.APPLICATION.Repositories.Services
 
         public async Task<ResponseDTO> GetFacultyDataByID(int Id)
         {
-         
+            var departmentnames = _context.FacultyNodes.Where(d => d.FacultyId == Id).Select(d => d.Name).ToList();
+            var facultyphases=_context.FacultyPhases.Where(p=>p.FacultyId==Id).Select(p => p.Name).ToList();
             var faculty = await _context.Faculties
                 .Where(f => f.Id == Id).SelectMany
                 (faculty => faculty.Bylaws.Select(Bylaw => new FacultyDTO
@@ -31,8 +32,8 @@ namespace EMS_SYSTEM.APPLICATION.Repositories.Services
                     FacultyName = faculty.FacultyName,
                     BYlaw=Bylaw.Name,
                     StudyMethod=Bylaw.CodeStudyMethod!.Name,
-                    
-
+                    facultyNode=departmentnames!,
+                    facultyPhase=facultyphases!,
 
                 }
                 )).FirstOrDefaultAsync();
