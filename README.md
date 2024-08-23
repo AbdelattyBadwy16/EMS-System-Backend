@@ -1,5 +1,3 @@
-![Global AdminF](https://github.com/user-attachments/assets/141270eb-21ae-47d9-97a6-825867660762)# Examination Committees Management System
-<img src="./Imgs/logo black.png" alt="logo" width="100"/> 
 EMS is a university system for managing 'Exam Committees' for all faculties,
 utilizes .NET 8 as backend and ReactJS as frontend frameworks.
 
