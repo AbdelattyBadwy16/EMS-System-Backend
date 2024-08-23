@@ -1,4 +1,4 @@
-# Examination Committees Management System
+![Global AdminF](https://github.com/user-attachments/assets/141270eb-21ae-47d9-97a6-825867660762)# Examination Committees Management System
 <img src="./Imgs/logo black.png" alt="logo" width="100"/> 
 EMS is a university system for managing 'Exam Committees' for all faculties,
 utilizes .NET 8 as backend and ReactJS as frontend frameworks.
@@ -38,9 +38,14 @@ utilizes .NET 8 as backend and ReactJS as frontend frameworks.
 # User Interface
 Some UI images:
 
-<img src="./Imgs/Login.png" alt="1" width="500"/> <img src="./Imgs/Global Admin2.png" alt="2" width="500"/>
-<img src="./Imgs/Global AdminF.png" alt="3" width="500"/> <img src="./Imgs/AddCommittee.png" alt="4" width="500"/>
-<img src="./Imgs/Student  Page.png" alt="5" width="500"/> <img src="./Imgs/ChangePass FacultyAdmin.png" alt="6" width="500"/>
+![Login](https://github.com/user-attachments/assets/eb493621-2e25-412a-9b64-d5864b3d5afd)
+![Global Admin2](https://github.com/user-attachments/assets/1279785f-64a3-4e5c-a4db-58a5208da694)
+![Global AdminF](https://github.com/user-attachments/assets/2183efb1-931e-4bde-800d-16645e610b81)
+![AddCommittee](https://github.com/user-attachments/assets/e754ab8f-16d1-42a2-813a-74fe96088745)
+![Student  Page](https://github.com/user-attachments/assets/36efaa81-6922-45e0-b56a-ceb65f0d5787)
+![ChangePass FacultyAdmin](https://github.com/user-attachments/assets/bc29b252-40e0-495e-bebb-8cd6e78ce3e0)
+
+
 
 # Contributors Team
 - [**Abdelaty Badawy**](https://github.com/AbdelattyBadwy16): Fullstack developer
